@@ -4,8 +4,9 @@ Dashboard Streamlit — visualização de dados e blockchain.
 
 import streamlit as st
 import pandas as pd
-from app.data_pipeline import carregar_dados
-from app.blockchain_core import criar_blockchain_inicial
+from data_pipeline import carregar_dados
+from blockchain_core import criar_blockchain_inicial
+
 
 st.set_page_config(page_title="SmartHealth Blockchain", layout="wide")
 st.title("🧬 SmartHealth Blockchain — Auditoria de Dados de Saúde")
