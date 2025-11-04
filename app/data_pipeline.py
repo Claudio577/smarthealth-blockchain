@@ -10,7 +10,7 @@ def baixar_dados_kaggle(caminho_destino="data/"):
     api.authenticate()
     api.dataset_download_files('unanimad/corona-virus-brazil', path=caminho_destino, unzip=True)
 
-def carregar_dados(caminho="data/cases-brazil-cities-time.csv"):
+def carregar_dados(caminho="cases-brazil-cities-time.csv"):
     df = pd.read_csv(caminho)
     df_estado = df.groupby(['date', 'state'])[['newCases', 'deaths']].sum().reset_index()
     df_estado.rename(columns={
