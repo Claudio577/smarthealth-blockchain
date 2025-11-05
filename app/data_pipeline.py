@@ -1,13 +1,17 @@
-# NOVO: Adicionar importações para ML
-from sklearn.model_selection import train_test_split
+# NO ARQUIVO app/data_pipeline.py
+
+import pandas as pd
+import streamlit as st
+import os 
+import numpy as np
+
+# NOVAS IMPORTAÇÕES NECESSÁRIAS:
 from sklearn.linear_model import LogisticRegression
 from sklearn.preprocessing import StandardScaler
-from sklearn.metrics import classification_report
-import joblib # Para salvar/carregar o modelo
+from sklearn.model_selection import train_test_split # Esta é opcional se não for usada, mas se estiver lá, precisa ser importada.
+import joblib 
 
-# [Restante das suas importações: pandas, streamlit, os]
 
-# ... [função carregar_dados() permanece a mesma] ...
 
 # --- TREINAMENTO DO MODELO (NOVO) ---
 @st.cache_resource # Use cache_resource para o modelo
